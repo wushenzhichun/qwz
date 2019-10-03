@@ -1,24 +1,28 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>µ¹¼ÆÊ±</title>
-<style>
+<meta charset="utf-8">
+<title>å€’è®¡æ—¶</title>
+<style>
+
 #CountMsg{
            font-size: 110px;
-        }
-</style>
+        }
+
+</style>
+
 </head>
-<body>
+<body>
+
 <DIV id="CountMsg" class="HotDate">
-<span id="t_d">00Ìì</span>
-<span id="t_h">00Ê±</span>
-<span id="t_m">00·Ö</span>
-<span id="t_s">00Ãë</span>
+<span id="t_d">00å¤©</span>
+<span id="t_h">00æ—¶</span>
+<span id="t_m">00åˆ†</span>
+<span id="t_s">00ç§’</span>
 </DIV>
 <script type="text/javascript">
 function getRTime(){
-var EndTime= new Date('2019/6/26 8:30:00'); //½ØÖ¹Ê±¼ä
+var EndTime= new Date('2019/6/26 8:30:00'); //æˆªæ­¢æ—¶é—´
 var NowTime = new Date();
 var t =EndTime.getTime() - NowTime.getTime();
 /*var d=Math.floor(t/1000/60/60/24);
@@ -34,10 +38,10 @@ var h=Math.floor(t/1000/60/60%24);
 var m=Math.floor(t/1000/60%60);
 var s=Math.floor(t/1000%60);
   
-document.getElementById("t_d").innerHTML = d + "Ìì";
-document.getElementById("t_h").innerHTML = h + "Ê±";
-document.getElementById("t_m").innerHTML = m + "·Ö";
-document.getElementById("t_s").innerHTML = s + "Ãë";
+document.getElementById("t_d").innerHTML = d + "å¤©";
+document.getElementById("t_h").innerHTML = h + "æ—¶";
+document.getElementById("t_m").innerHTML = m + "åˆ†";
+document.getElementById("t_s").innerHTML = s + "ç§’";
 }
 setInterval(getRTime,1000);
 </script>
