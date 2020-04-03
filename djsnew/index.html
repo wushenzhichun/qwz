@@ -7,15 +7,15 @@
 		<meta charset="utf-8">
 		<title>倒计时</title>
 		<style type="text/css">
-			.playtime{height:10;margin:0 auto;text-align:center;}
-			.playtime:before{vertical-align: middle;position:absolute;top:10px;}
-			.nowtime{position:absolute;top:10px;left:10px;}
-			.weather{position:absolute;top:10px;right:10px}
-			body{background-image:url(them.jpg);background-size:cover;font-family:"STZhongsong","SimHei"}
-			.todaypoem{position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:#ff9900}
-			.todayhitokoto{display:none;position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:#ff9900}
+			.playtime{height:10;margin:0 auto;text-align:center;color:white}
+			.playtime:before{vertical-align: middle;position:absolute;top:10px;color:white}
+			.nowtime{position:absolute;top:10px;left:10px;color:white}
+			.weather{display:none;position:absolute;top:10px;right:10px;color:white}
+			body{background-size:cover;font-family:"STZhongsong","SimHei";color:white}
+			.todaypoem{position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:white}
+			.todayhitokoto{display:none;position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:white}
 		</style>
-
+<body bgcolor="black">
 	</head>
 	<body>
 		<font size="6.66">
@@ -57,13 +57,6 @@
 					cg.innerHTML = cg.innerHTML.replace(" ","日<br/>");
 				}
 			</script>
-		</div>
-
-		<div class="weather"> <!--天气插件，基于天气网-->
-<script type="text/javascript">
-WIDGET = {FID: '7NA3DzWAJG'}
-</script>
-<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
 		</div>
 
 		<div class="todaypoem">
