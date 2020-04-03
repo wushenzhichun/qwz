@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--Coding By. DoubleCat 中二短尾喵-->
+<!--其实是喵中考前夕给班上电子白板写的(你知道的太多了)-->
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title>倒计时</title>
+		<style type="text/css">
+			.playtime{height:10;margin:0 auto;text-align:center;}
+			.playtime:before{vertical-align: middle;position:absolute;top:10px;}
+			.nowtime{position:absolute;top:10px;left:10px;}
+			.weather{position:absolute;top:10px;right:10px}
+			body{background-image:url(them.jpg);background-size:cover;font-family:"STZhongsong","SimHei"}
+			.todaypoem{position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:#ff9900}
+			.todayhitokoto{display:none;position:absolute;text-align:center;left:0;right:0;top:50%;transform:translate(0, -50%);font-size:66px;color:#ff9900}
+		</style>
+
+	</head>
+	<body>
+		<font size="6.66">
+
+		<div class="playtime">
+				<div>距离福建中考还有<br/> <!--在这里填写结束内容--><!--未来可能会加上自动切换“还有”“仅有”的功能-->
+					<span id="clock"></span>
+				</div>
+			<script>
+				var obj = document.getElementById("clock");
+				var endTime = new Date();
+				endTime.setMonth(5,20); <!--在这里填写结束日期（月份记得-1）-->
+				endTime.setHours(0,0,0,1000); <!--在这里填写结束时间-->
+				window.setInterval(myfun,100);
+				function myfun(){
+					var startTime = new Date();
+					var num = endTime.getTime()-startTime.getTime();
+					var day = parseInt(num/1000/60/60/24);
+					if(day<0){
+						endTime.setMonth(17,12);
+						window.setInterval(myfun,100)
+					}
+					var hh = parseInt((num/1000/60/60/24 - day)*24)
+					var mm = parseInt(((num/1000/60/60/24 - day)*24-hh)*60)
+					var ss = parseInt((((num/1000/60/60/24 - day)*24-hh)*60-mm)*60)
+					obj.innerHTML = day + "天" + hh + "小时" + mm + "分钟" + ss + "秒";
+				}
+			</script>
+		</div>
+
+		<div class="nowtime">
+			<span id="cg"></span>
+			<script type="text/javascript">
+				setInterval(swaptime,100);
+				function swaptime(){
+					cg.innerHTML = new Date().toLocaleString();
+					cg.innerHTML = cg.innerHTML.replace("/","年");
+					cg.innerHTML = cg.innerHTML.replace("/","月");
+					cg.innerHTML = cg.innerHTML.replace(" ","日<br/>");
+				}
+			</script>
+		</div>
+
+		<div class="weather"> <!--天气插件，基于天气网-->
+<script type="text/javascript">
+WIDGET = {FID: '7NA3DzWAJG'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+		</div>
+
+		<div class="todaypoem">
+			<p id="poem">
+    <p id="info">
+  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    jinrishici.load(function(result) {
+      poem.innerHTML = result.data.content
+      info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+      document.getElementById("poem").value(poem);
+      document.getElementById("info").value(info);  
+  });
+  </script>
+		</div>
+<div class="todayhitokoto">
+<p id="hitokoto">
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer>
+</script>
+</div>
+		</font>
+	</body>
+</html>
