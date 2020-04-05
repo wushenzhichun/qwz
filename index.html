@@ -1,29 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>学习问题研究讨论</title>
-    <body bgcolor="black">
-        <style type="text/css">
-.gg{color:white}
-            </style>
-</head>
-<body>
-<div class=gg>
-<h1>公告</h1>
-<br>2020年4月4日举行全国性哀悼活动，在此期间，我群做出以下规定：</br>
-<br>一、强制性规定</br>
-<br>1、2020年4月4日10时起全体禁言30分钟，若管理员在全体禁言期间发言，将收回管理权限并禁言一天，管理员擅自提前关闭全员禁言处罚同上。</br>
-<br>2、2020年4月4日当天，全群禁止娱乐性消息分享，包括但不限于，游戏截图，游戏邀请，娱乐圈新闻，娱乐视频，娱乐直播。若违反此条规定，禁言一天。</br>
-<br>二、非强制性告知</br>
-<br>1、至2020年4月4日结束前本群头像改为灰色。</br>
-<br>2、建议2020年4月4日当天群成员将头像改为灰色。</br>
-<br>3、至2020年4月4日结束前本群相关网站配色改为黑白灰。</br>
-<br>4、我代表本群管理员对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼。</br>
-<br>---</br>
-<br>相关链接：
-<br>国务院办公厅关于为新冠肺炎疫情牺牲烈士和逝世同胞举行全国性哀悼活动的通知</br>
-<br>为表达全国各族人民对抗击新冠肺炎疫情斗争牺牲烈士和逝世同胞的深切哀悼，国务院决定，2020年4月4日举行全国性哀悼活动。</br>
-<br>在此期间，全国和驻外使领馆下半旗志哀，全国停止公共娱乐活动。4月4日10时起，全国人民默哀3分钟，汽车、火车、舰船鸣笛，防空警报鸣响。</br>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<title>学习问题研究讨论-群官网</title>
+		<link rel="icon" type="image/x-ico" href="x.ico"/>
+		<style>
+			body {background-color: #91AD70;font-family:"STZhongsong","SimHei";}
+			.zbt{text-align:center;}
+			.wzyy
+			{-moz-text-shadow: 5px 5px 10px #666666;/*firefox*/
+			-webkit-text-shadow: 5px 5px 10px #666666;/*safari或chrome*/
+			text-shadow:5px 5px 10px #666666;/*opera或ie9*/}
+			.zdhh
+			{width: 100%;  
+			height:auto;  
+			word-wrap:break-word;  
+			word-break:break-all;  
+			overflow:hidden;}
+			.nn
+			{text-align:center;
+			border:2px solid #F596AA;
+			padding:10px 40px; 
+			background:#FEDFE1;
+			border-radius:25px;
+			-moz-border-radius:25px; /* 老的 Firefox */
+			-moz-box-shadow: 5px 5px 10px #666666;/*firefox*/
+			-webkit-box-shadow: 5px 5px 10px #666666;/*safari或chrome*/
+			box-shadow:5px 5px 10px #666666;/*opera或ie9*/}
+		</style>
+	</head>
+	<body>
+		<h1 class="zbt wzyy">学习问题研究讨论</h1>
+		<h3 class="wzyy zdhh">“世上没有从天而降的英雄，只有挺身而出的凡人。”</h3>
+		<h2 class="wzyy">公告通知</h2>
+		<p class="wzyy zdhh">暂无新公告</p>
+		<h2 class="wzyy">一言诗词</h2>
+		<h3 class="wzyy">今日一言</h3>
+		<div class="todayhitokoto">
+			<p class="wzyy zdhh" id="hitokoto">
+				<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer>					
+				</script>
+				</div>
+		<h3 class="wzyy">今日诗词</h3>
+		<div class="todaypoem">
+		<p class="wzyy zdhh" id="poem">
+			<p class="wzyy zdhh" id="info">
+				<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+				<script type="text/javascript">
+					jinrishici.load(function(result) {
+						poem.innerHTML = result.data.content
+						info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+						document.getElementById("poem").value(poem);
+						document.getElementById("info").value(info);  
+						});
+						</script>
+						</p id="poem info">
+						</div>
+		<h2 class="wzyy">工具功能</h2>
+		<h3 class="wzyy">疫情数据</h3>
+		<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"><button type="button" class=nn>丁香园疫情地图</button></a>
+		<br></br>
+		<a href="https://minqing.fzzhengxinyun.com"><button type="button" class=nn>福州新冠肺炎分析平台</button></a>
+		<h3 class="wzyy">中考时间</h3>
+		<a href="http://jyt.fujian.gov.cn/xxgk/zywj/202001/P020200117530622639865.pdf"><button class=nn>中考时间</button></a>
+		<br></br>
+		<a href="https://wushenzhichun.github.io/qwz/djsnew"><button type="button" class=nn>中考倒计时</button></a>
+		<h3 class="wzyy">资料下载</h3>
+		<a href="/"><button type="button" class="nn">下载中心</button></a>
+		<h3 class="wzyy">快捷入口</h3>
+		<a href="http://wszc.mx23.top/"><button type="button" class="nn">疫情政治题库查询系统</button></a>
+		<br></br>
+		<a href="https://shimo.im/docs/VpdcJqxJy6gQR9hT/"><button type="button" class="nn">政治提纲整合</button></a>
+		<br></br>
+		<a href="/"><button type="button" class="nn">网课直播回放</button></a>
+		<h3 class="wzyy">友情链接</h3>
+		<a href="/"><button type="button" class="nn">哔哩哔哩_吾甚之纯</button></a>
+		<h5 class="zbt wzyy">下面什么都没有了...</h5>
+	</body>
 </html>
