@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>页面适应黑暗模式</title>
+		<style type="text/css">
+			.back {background: white; color:  #555;text-align: center}
+			
+			@media (prefers-color-scheme: dark) {
+			  .back {background:  #333; color: white;}
+			  .models {border:solid 1px #00ff00}
+			}
+			
+			@media (prefers-color-scheme: light) {
+			  .back {background: white; color:  #555;}
+			  .models {border:solid 1px #2b85e4}
+			}
+		</style>
+	</head>
+	<body>
+		<body class="back">
+		<div class="models"><h1>测试文字</h1></div>
+	</body>
+</html>
