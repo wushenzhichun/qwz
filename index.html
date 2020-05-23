@@ -6,46 +6,84 @@
 		<title>学习问题研究讨论-群官网</title>
 		<link rel="icon" type="image/x-ico" href="x.ico"/>
 		<style>
-			body {background-color: #91AD70;font-family:"STZhongsong","SimHei";}
-			.zbt{text-align:center;}
-			.wzyy
-			{-moz-text-shadow: 5px 5px 10px #666666;/*firefox*/
-			-webkit-text-shadow: 5px 5px 10px #666666;/*safari或chrome*/
-			text-shadow:5px 5px 10px #666666;/*opera或ie9*/}
+			body{background-color: #fefefe;}
+			.zbt{margin:0 auto;width:85%}
 			.zdhh
 			{width: 100%;  
 			height:auto;  
 			word-wrap:break-word;  
 			word-break:break-all;  
-			overflow:hidden;}
+			overflow:hidden;
+			}
 			.nn
 			{text-align:center;
-			border:2px solid #F596AA;
+			border:0px solid #000000;
 			padding:10px 40px; 
-			background:#FEDFE1;
-			border-radius:25px;
-			-moz-border-radius:25px; /* 老的 Firefox */
-			-moz-box-shadow: 5px 5px 10px #666666;/*firefox*/
-			-webkit-box-shadow: 5px 5px 10px #666666;/*safari或chrome*/
-			box-shadow:5px 5px 10px #666666;/*opera或ie9*/}
+			background:#007AFF;
+			border-radius:13px;
+			color: #ffffff;
+			font-size: 95%;
+			font-weight: 500;}
+			.yj {
+			border-radius: 25px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			width: 85%;
+			padding: 20px; 
+			margin:0 auto;
+			background-color:white 
+			}
 		</style>
 	</head>
 	<body>
-		<h1 class="zbt wzyy">学习问题研究讨论</h1>
-		<h3 class="wzyy zdhh">“世上没有从天而降的英雄，只有挺身而出的凡人。”</h3>
-		<h2 class="wzyy">公告通知</h2>
-		<p class="wzyy zdhh">暂无新公告</p>
-		<h2 class="wzyy">一言诗词</h2>
-		<h3 class="wzyy">今日一言</h3>
+		<br>
+		<h1 class="zbt">学研讨</h1>
+		<p class="zbt">学习问题研究讨论</p>
+		<br>
+		<div class="yj">
+		<h3 class="zdhh">
+				<div>距离福建中考还有<br/> <!--在这里填写结束内容--><!--未来可能会加上自动切换“还有”“仅有”的功能-->
+					<span id="clock"></span>
+				</div>
+			<script>
+				var obj = document.getElementById("clock");
+				var endTime = new Date();
+				endTime.setMonth(6,18); <!--在这里填写结束日期（月份记得-1）-->
+				endTime.setHours(0,0,0,1000); <!--在这里填写结束时间-->
+				window.setInterval(myfun,100);
+				function myfun(){
+					var startTime = new Date();
+					var num = endTime.getTime()-startTime.getTime();
+					var day = parseInt(num/1000/60/60/24);
+					if(day<0){
+						endTime.setMonth(17,12);
+						window.setInterval(myfun,100)
+					}
+					var hh = parseInt((num/1000/60/60/24 - day)*24)
+					var mm = parseInt(((num/1000/60/60/24 - day)*24-hh)*60)
+					var ss = parseInt((((num/1000/60/60/24 - day)*24-hh)*60-mm)*60)
+					obj.innerHTML = day + "天" + hh + "小时" + mm + "分钟" + ss + "秒";
+				}
+			</script>
+		</h3>
+		</div>
+		<br>
+		<div class="yj">
+		<h2 class="zdhh">公告通知</h2>
+		<p class="zdhh">2020年福建省中考时间调整为7月18日-20日举行<br><br>取消福州市2020年初中毕业升学体育考试，考生体育科目成绩按满分40分计入中考投档总分</p>
+		</div>
+		<br>
+		<div class="yj">
+		<h2 class="zdhh">一言诗词</h2>
+		<h3 class="zdhh">今日一言</h3>
 		<div class="todayhitokoto">
-			<p class="wzyy zdhh" id="hitokoto">
+			<p class="zdhh" id="hitokoto">
 				<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer>					
 				</script>
 				</div>
-		<h3 class="wzyy">今日诗词</h3>
+		<h3 class="">今日诗词</h3>
 		<div class="todaypoem">
-		<p class="wzyy zdhh" id="poem">
-			<p class="wzyy zdhh" id="info">
+		<p class="zdhh" id="poem">
+			<p class="zdhh" id="info">
 				<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 				<script type="text/javascript">
 					jinrishici.load(function(result) {
@@ -57,25 +95,23 @@
 						</script>
 						</p id="poem info">
 						</div>
-		<h2 class="wzyy">工具功能</h2>
-		<h3 class="wzyy">疫情数据</h3>
-		<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"><button type="button" class=nn>丁香园疫情地图</button></a>
-		<br></br>
-		<a href="https://minqing.fzzhengxinyun.com"><button type="button" class=nn>福州新冠肺炎分析平台</button></a>
-		<h3 class="wzyy">中考时间</h3>
-		<a href="http://jyt.fujian.gov.cn/xxgk/zywj/202001/P020200117530622639865.pdf"><button class=nn>中考时间</button></a>
-		<br></br>
-		<a href="https://wushenzhichun.github.io/qwz/djsnew"><button type="button" class=nn>中考倒计时</button></a>
-		<h3 class="wzyy">资料下载</h3>
-		<a href="https://wushenzhichun.github.io/qwz/zzz"><button type="button" class="nn">下载中心</button></a>
-		<h3 class="wzyy">快捷入口</h3>
-		<a href="http://wszc.mx23.top/"><button type="button" class="nn">疫情政治题库查询系统</button></a>
-		<br></br>
-		<a href="https://shimo.im/docs/VpdcJqxJy6gQR9hT/"><button type="button" class="nn">政治提纲整合</button></a>
-		<br></br>
-		<a href="https://wushenzhichun.github.io/qwz/zzz"><button type="button" class="nn">网课直播回放</button></a>
-		<h2 class="wzyy">友情链接</h2>
+		</div>
+		<br>
+		<div class="yj">
+		<h2 class="zdhh">工具功能</h2>
+		<h3 class="zdhh">疫情数据</h3>
+		<a href="https://ncov.dxy.cn/ncovh5/view/pneumonia?link=0&share=0&study_style_id=feeds_pure&study_comment_disable=0"><button type="button" class="nn">丁香园疫情地图</button></a>
+		<br>
+		<h3 class="zdhh">资料下载</h3>
+		<a href="zxxz/index.html"><button type="button" class="nn">下载中心</button></a>
+		<br><br>
+		</div>
+		<br>
+		<div class="yj">
+		<h2 class="zdhh">友情链接</h2>
 		<a href="https://space.bilibili.com/156926297"><button type="button" class="nn">哔哩哔哩_吾甚之纯</button></a>
-		<h5 class="zbt wzyy">下面什么都没有了...</h5>
+		<br><br>
+		</div>
+		<br><br>
 	</body>
 </html>
